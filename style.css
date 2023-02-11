@@ -1,0 +1,82 @@
+
+
+
+
+.coin {
+  margin-top: 15px;
+}
+
+   
+ 
+  
+ 
+ 
+.kauvec_adelon {
+  padding: 0px;
+  width: 0;
+  height: 0;
+} 
+ 
+
+  .game{
+    height: 450px;
+    width: 450px;
+    position: relative;
+    margin: auto;
+    border: 2px solid black;
+    background-image: url(./img/кирпичная-стена-пиксе-а-83695317.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+ 
+ 
+  .bg__box {
+    background-image: url('./img/0ae56bda67d9fd56bd83088777d23ed4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 46vw;
+    font-family: 'Sonic 1 Title Screen Filled';
+  } 
+  
+.restart {
+  background-color: aqua;
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  padding: 14px;
+  width: 130px;
+  font-family: 'Sonic 1 Title Screen Filled';
+  display: flex;
+  gap: 5px;
+}
+
+
+
+
+  .square {
+    height: 40px;
+    width: 40px;
+    left: 20px;
+    top: 20px;
+    width: 20px;
+    position: absolute;
+    background:  yellow;
+    cursor: pointer;
+  }
+
+  .counter {
+    text-align: center;
+  }
+   
+
+  @font-face {
+    font-family: 'Sonic 1 Title Screen Filled';
+    src: url(./fonts/Sonic\ 1\ Title\ Screen\ Filled.ttf);
+  }
+
+  @media (max-width: 1250px) {
+    .square-wrapper {
+      width: 350px;
+    }
+  }

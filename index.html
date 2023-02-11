@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+<div class="game-wrapper">
+  <div class="bg__box">
+  <p class="counter"> Couter:  <span id="counter"></span> <img class="coin" width="30px"  src="./img/341-3416805_coin-pixel-art-smiley.png" alt=""> </p>
+  
+<button  class="restart" onclick="reload_interval(1); return false;">
+  Restart  <img width="20px" src="https://cdn-icons-png.flaticon.com/512/1248/1248861.png" alt=""> </button>
+ 
+  <div  class="game" onclick="fale">
+  <div class="square-wrapper"> <button class="kauvec_adelon"> <span class="square" id='square'></span></button> 
+  </div>
+</div>
+</div>
+</div>
+<script>
+function reload_interval(time){
+	setTimeout(function(){
+		location.reload();
+	}, time);
+}
+
+</script>
+<script>
+  AOS.init();
+</script>
+<script src="./script.js"></script>
+</body>
+</html>
+
+
+
