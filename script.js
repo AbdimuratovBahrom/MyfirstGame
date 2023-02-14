@@ -1,23 +1,22 @@
-let startToGame = +prompt('сколько секунд вы хотите играть')
-let complexity = prompt('Какую сложность вы хотите Легко, Нормально, Сложно, Эксперт')
+let startToGame = +prompt('How many seconds do you want to play')
+let complexity = prompt('What difficulty do you want 1, 2, 3, 4 . Enter the required number in the field below')
 
-if(complexity == 'Легко') {
+if(complexity == '1') {
   setInterval(()=> {
     setLocationToSquare()
   }, 3000)
 
   
-
-} else if(complexity == 'Нормально') {
+} else if(complexity == '2') {
   setInterval(()=> {
     setLocationToSquare()
   }, 2000)
 
-}else if(complexity == 'Сложно') {
+}else if(complexity == '3') {
   setInterval(()=> {
     setLocationToSquare()
   }, 1000)
-}else if(complexity == 'Эксперт') {
+}else if(complexity == '4') {
   setInterval(()=> {
     setLocationToSquare()
   }, 500)
@@ -51,18 +50,8 @@ function setLocationToSquare() {
   square.style.bottom = bottom + 'px'
   square.style.top = top + 'px'
   square.style.right = right + 'px'
-  square.style.background = generateRandomColor()
 }
 
-
-function generateRandomColor(){
-  let maxVal = 0xFFFFFF; 
-  let randomNumber = Math.random() * maxVal;
-  randomNumber = Math.floor(randomNumber);
-  randomNumber = randomNumber.toString(16);
-  let randColor = randomNumber.padStart(6, 0);
-  return `#${randColor.toUpperCase()}`
-}
 
 
 setTimeout(() => {
@@ -78,5 +67,32 @@ const buttons = document.querySelectorAll(".kauvec_adelon");
 buttons.forEach(button => {
   button.addEventListener("click", () => {
   audio.play();
-  });
-});
+  })});
+
+
+
+
+  let timer; // пока пустая переменная
+  let x = startToGame; // стартовое значение обратного отсчета
+  countdown(); // вызов функции
+  function countdown(){  // функция обратного отсчета
+    document.getElementById('rocket').innerHTML = x;
+    x--; // уменьшаем число на единицу
+    if (x<0){
+      clearTimeout(timer); // таймер остановится на нуле
+    
+    }
+    else {
+      timer = setTimeout(countdown, 1000);
+    }
+  } 
+
+
+
+  const musicAudio = new Audio("./audio/Sean&Bobo.mp3");
+  const music = document.querySelectorAll(".music");
+  
+  music.forEach(music => {
+    music.addEventListener("click", () => {
+    musicAudio.play();
+    })});
