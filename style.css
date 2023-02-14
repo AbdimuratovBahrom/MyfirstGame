@@ -1,5 +1,5 @@
 .coin {
-  margin-top: 15px;
+  margin-bottom: -10px;
   border-radius: 60px;
 
 }
@@ -78,4 +78,22 @@
 
 #rocket {
   text-align: center;
+}
+
+
+
+.music {
+  margin-top: 4px;
+  font-size: 10px;
+  margin-left: 20px;
+  color: rgb(91, 88, 88);
+  border-radius: 16px;
+  border: none;
+  outline: none;
+  padding: 14px;
+  width: 130px;
+  font-family: 'Sonic 1 Title Screen Filled';
+  display: flex;
+  text-align: center;
+  gap: 5px;
 }
